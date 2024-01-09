@@ -9,27 +9,38 @@
     <!-- FILE ABOUT FILE CSS -->
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
-<body>
-    <main>
-        <div>
-          <h1>CIAO MONDO</h1>  
-          <form>
-            nome cognome:
-            <input id="nameSurname" type="text">
+<body class="bg-danger">
+    <main class="text-center container">
+      <h1 class="text-uppercase text-white ">calcola il tuo prezzo del biglietto</h1>  
 
-            Km da percorrere:
-            <input id="numberKm" type="number">
+      <div class="bg-white rounded p-3">
+        <div class="row">
+          <div class="col-4">
+            <label for="nameSurname" class="form-label">Nome cognome</label>
+          <input id="nameSurname" type="text" class="form-control" name="NomeCgonome">
+          </div>
 
-            fascia d'età:
-            <input id="numberAge" type="number">
+          <div class="col-4">
+            <label for="Kilometers" class="form-label">Km da percorrere</label>
+          <input id="Kilometers" type="number" class="form-control" name="ChilometriDaFare">
+          </div>
 
-            <button id="button" type="submit">genera</button>
-          </form>
+          <div class="col-4">
+            <label for="agePerson" class="form-label">Fascia d'età</label>
+            <select id="agePerson" class="form-select" name="FasciaEtà">
+              <option value="minorenne">Minorenne</option>
+              <option value="maggiorenne">Maggiorenne</option>
+              <option value="over">Over 65</option>
+            </select>
+          </div>
         </div>
+        
+        <button class="mt-3 btn btn-primary">
+          Genera Biglietto
+        </button>
+      </div>
 
-        <div id="ticket">
-
-        </div>
+      <h2 class="text-white text-uppercase ">il tuo bliglietto</h2>
     </main>
 
     <!-- FILE ABOUT THE JAVASCRIPT -->
