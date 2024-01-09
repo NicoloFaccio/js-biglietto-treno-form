@@ -29,7 +29,19 @@ bottone.addEventListener("click", function() {
      
     nomePasseggero.innerHTML = nomeCognome.value
 
-    if (etaPersona=== "minorenne")
+    if ( etaPersona.value === "minorenne" ){
+        offertaBiglietto.innerHTML = "biglietto scontato del 20%"
+        
+        prezzoBiglietto.innerHTML = (0.21*chilometri.value)-(0.21*chilometri.value*20/100).toFixed(2) + "€"
+    } else  if ( etaPersona.value === "maggiorenne" ){
+        offertaBiglietto.innerHTML = "biglietto standard"
+
+        prezzoBiglietto.innerHTML = (0.21*chilometri.value).toFixed(2) + "€"
+    } else  if ( etaPersona.value === "over" ){
+        offertaBiglietto.innerHTML = "biglietto scontato del 40%"
+
+        prezzoBiglietto.innerHTML = (0.21*kilometresDone)-(0.21*kilometresDone*40/100).toFixed(2) + "€"
+    }
 })
 
 function RandomNumber( min , max ) {
